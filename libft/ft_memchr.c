@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:00:14 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/09 19:03:59 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:06:54 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	*ft_memchr(const void *s, int c, unsigned int n)
 		temp++;
 		n--;
 	}
-	return ('\0');
+	return (void *)0;
 }

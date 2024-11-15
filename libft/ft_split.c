@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:46:39 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/09 20:57:40 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:08:43 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ char **ft_split(char const *s, char c)
 {
 	char **arr;
 
-	arr = malloc(split_count((char *)s,c) * sizeof(char *));
+	arr = malloc(count_words(s,c) * sizeof(char *));
 	if(arr == (void *)0)
 		return (void *)0;
-	
+	return (void *)0;
 }
