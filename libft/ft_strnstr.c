@@ -6,18 +6,20 @@
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:25:45 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/15 14:45:37 by haruki           ###   ########.fr       */
+/*   Updated: 2024/11/18 01:00:43 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static unsigned int	size_of(const char *s)
+static unsigned int	ft_strlen(const char *s)
 {
-	int	i;
+	int	len;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	len = 0;
+	while (s[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
 }
 
 int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
@@ -43,9 +45,11 @@ char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 	char	*temp;
 
 	temp = (char *)big;
-	while (len > 0)
+	if(*little == '\0')
+		return temp;
+	while (*temp != '\0' && len >= ft_strlen(little))
 	{
-		if (ft_strncmp(temp, little, size_of(little)) == 0)
+		if (ft_strncmp((const char *)temp, little, ft_strlen(little)) == 0)
 			return (temp);
 		temp++;
 		len--;

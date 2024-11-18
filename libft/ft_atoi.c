@@ -6,7 +6,7 @@
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:38:28 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/14 14:06:29 by haruki           ###   ########.fr       */
+/*   Updated: 2024/11/18 01:19:34 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_atoi(const char *nptr)
 		sign = -1;
 		temp++;
 	}
-	if (*temp == '+')
+	else if (*temp == '+')
 		temp++;
 	while (*temp >= 48 && *temp <= 57)
 	{
