@@ -3,67 +3,43 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:10:23 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/21 10:19:00 by haruki           ###   ########.fr       */
+/*   Updated: 2024/11/30 18:31:59 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 
-static int	count_char(const char *s, const char *c)
+static int	included(char c, char const *set)
 {
-	int	count;
-	int	found;
-	int	index;
-	int	i;
-
-	i = 0;
-	count = 0;
-	while (s[i] != '\0')
+	while (*set != '\0')
 	{
-		found = 0;
-		index = 0;
-		while (c[index] != '\0')
-		{
-			if (s[i] == c[index])
-			{
-				found++;
-				break ;
-			}
-			index++;
-		}
-		if (found == 0)
-			count++;
-		i++;
+		if (c == *set)
+			return (1);
+		set++;
 	}
-	return (count);
+	return (0);
 }
 
-static char	*ft_trim(char const *s1, char const *set, char *ptr)
+static char	*trim(unsigned int first, unsigned int last, char const *s1)
 {
-	int	i;
-	int	j;
-	int	index;
+	char			*ptr;
+	unsigned int	i;
 
 	i = 0;
-	j = 0;
-	while (s1[j] != '\0')
+	if (first > last)
+		return (ft_strdup(""));
+	ptr = malloc(last - first + 2);
+	if (ptr == (void *)0)
+		return ((void *)0);
+	while (first <= last)
 	{
-		index = 0;
-		while (set[index] != '\0')
-		{
-			if (s1[j] == set[index])
-				break ;
-			index++;
-		}
-		if (set[index] == '\0')
-		{
-			ptr[i] = s1[j];
-			i++;
-		}
-		j++;
+		ptr[i] = s1[first];
+		i++;
+		first++;
 	}
 	ptr[i] = '\0';
 	return (ptr);
@@ -71,10 +47,16 @@ static char	*ft_trim(char const *s1, char const *set, char *ptr)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*ptr;
+	unsigned int	first;
+	unsigned int	last;
 
-	ptr = malloc(count_char(s1, set) + 1);
-	if (ptr == (void *)0)
-		return ((void *)0);
-	return (ft_trim(s1, set, ptr));
+	first = 0;
+	last = ft_strlen(s1) - 1;
+	if(s1[0] == 0)
+		return ft_strdup("");
+	while (included(s1[first], set) == 1 && first <= last)
+		first++;
+	while (included(s1[last], set) == 1 && first <= last)
+		last--;
+	return (trim(first, last, s1));
 }

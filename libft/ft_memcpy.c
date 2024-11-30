@@ -6,7 +6,7 @@
 /*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 13:06:38 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/09 20:14:12 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/11/30 17:20:21 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 	{
 		*c = *s;
 		c++;
-		src++;
+		s++;
 		n--;
 	}
 	return (dest);

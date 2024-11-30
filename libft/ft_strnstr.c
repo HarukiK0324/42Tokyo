@@ -6,46 +6,20 @@
 /*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:25:45 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/30 16:28:50 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/11/30 17:47:06 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static unsigned int	ft_strlen(const char *s)
-{
-	int	len;
-
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
-}
-
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
-{
-	char	*temp1;
-	char	*temp2;
-
-	temp1 = (char *)s1;
-	temp2 = (char *)s2;
-	while (*temp1 != '\0' && (*temp1 == *temp2) && n > 0)
-	{
-		temp1++;
-		temp2++;
-		n--;
-	}
-	if (n == 0)
-		return (0);
-	return ((int)*temp1 - (int)*temp2);
-}
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 {
 	char	*temp;
 
 	temp = (char *)big;
-	if (*little == '\0')
+	if (big == (void *)0 && len == 0)
+		return ((void *)0);
+	else if (*little == '\0')
 		return (temp);
 	while (*temp != '\0' && len >= ft_strlen(little))
 	{

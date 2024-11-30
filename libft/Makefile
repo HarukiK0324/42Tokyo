@@ -25,3 +25,7 @@ re: fclean all
 all: $(NAME)
 
 .PHONY: all clean fclean re
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)

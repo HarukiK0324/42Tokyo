@@ -6,7 +6,7 @@
 /*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:05:08 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/09 19:51:28 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/11/30 17:08:06 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		ptr[i] = s2[i - size_of(s1)];
 		i++;
 	}
+	ptr[i] = '\0';
 	return (ptr);
 }

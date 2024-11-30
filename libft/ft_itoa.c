@@ -6,10 +6,11 @@
 /*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:23:43 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/09 19:03:20 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/11/30 18:38:21 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 
 int	count_digit(int n)
@@ -17,11 +18,11 @@ int	count_digit(int n)
 	int	i;
 	int	base;
 
-	i = 1;
+	i = 0;
 	base = 10;
-	while (n >= base)
+	while (n > 0)
 	{
-		base *= 10;
+		n /= 10;
 		i++;
 	}
 	return (i);
@@ -34,10 +35,12 @@ char	*odd_itoa(int n)
 
 	i = count_digit(n);
 	str = malloc(count_digit(n) + 2);
+	if(str == (void *)0)
+		return (void *)0;
 	str[i + 1] = '\0';
 	while (i > 0)
 	{
-		str[i] = n % 10;
+		str[i] = '0' + (n % 10);
 		n /= 10;
 		i--;
 	}
@@ -51,7 +54,9 @@ char	*ft_itoa(int n)
 	char	*str;
 
 	if (n == -2147483648)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
+	else if (n == 0)
+		return (ft_strdup("0"));
 	else if (n < 0)
 	{
 		n = -n;
@@ -64,7 +69,7 @@ char	*ft_itoa(int n)
 	str[i] = '\0';
 	while (i > 0)
 	{
-		str[i - 1] = n % 10;
+		str[i - 1] = '0' + (n % 10);
 		n /= 10;
 		i--;
 	}

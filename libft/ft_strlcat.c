@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 13:21:01 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/15 14:20:15 by haruki           ###   ########.fr       */
+/*   Updated: 2024/11/30 18:37:38 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@ unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 	size_dest = size_of(dest);
 	size_src = size_of((char *)src);
 	if (size <= size_dest)
-	{
 		return (size + size_src);
-	}
 	i = size_dest;
 	dest += size_dest;
 	while (*src != '\0' && i < size - 1)

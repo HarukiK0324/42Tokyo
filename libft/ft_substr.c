@@ -6,23 +6,12 @@
 /*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:56:44 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/30 16:09:14 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/11/30 17:17:56 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
-static unsigned int	ft_strlen(const char *s)
-{
-	int	len;
-
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
-}
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, unsigned int len)
 {
