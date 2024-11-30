@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:10:23 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/09 20:00:41 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/11/21 10:19:00 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static char	*ft_trim(char const *s1, char const *set, char *ptr)
 		}
 		if (set[index] == '\0')
 		{
-			ptr[i] = *s1;
+			ptr[i] = s1[j];
 			i++;
 		}
 		j++;

@@ -6,7 +6,7 @@
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:46:39 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/15 14:08:43 by haruki           ###   ########.fr       */
+/*   Updated: 2024/11/30 16:01:51 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,9 @@ char **ft_split(char const *s, char c)
 {
 	char **arr;
 
-	arr = malloc(count_words(s,c) * sizeof(char *));
+	arr = malloc((count_words(s,c) + 1) * sizeof(char *));
 	if(arr == (void *)0)
 		return (void *)0;
-	return (void *)0;
+    arr = 
+	return arr;
 }

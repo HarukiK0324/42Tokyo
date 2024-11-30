@@ -6,7 +6,7 @@
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:14:05 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/18 01:35:16 by haruki           ###   ########.fr       */
+/*   Updated: 2024/11/21 10:19:00 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ void	*ft_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int i;
 
 	i = 0;
-	if (nmemb == 0 || size == 0 || (4294967295 / size) < nmemb)
+	if(size == 0 || nmemb == 0)
+		return malloc(1);
+	else if ((4294967295 / size) < nmemb)
 		return ((void *)0);
 	ptr = malloc(nmemb * size);
 	if (ptr == (void *)0)
