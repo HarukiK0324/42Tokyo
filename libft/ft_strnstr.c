@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:25:45 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/18 01:00:43 by haruki           ###   ########.fr       */
+/*   Updated: 2024/11/30 16:28:50 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ static unsigned int	ft_strlen(const char *s)
 
 int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
-	char *temp1;
-	char *temp2;
+	char	*temp1;
+	char	*temp2;
 
 	temp1 = (char *)s1;
 	temp2 = (char *)s2;
@@ -45,8 +45,8 @@ char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 	char	*temp;
 
 	temp = (char *)big;
-	if(*little == '\0')
-		return temp;
+	if (*little == '\0')
+		return (temp);
 	while (*temp != '\0' && len >= ft_strlen(little))
 	{
 		if (ft_strncmp((const char *)temp, little, ft_strlen(little)) == 0)
@@ -54,5 +54,5 @@ char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 		temp++;
 		len--;
 	}
-	return (void *)0;
+	return ((void *)0);
 }
