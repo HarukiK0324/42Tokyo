@@ -6,7 +6,7 @@
 /*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:10:23 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/30 18:31:59 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/11/30 18:43:29 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	first = 0;
 	last = ft_strlen(s1) - 1;
-	if(s1[0] == 0)
-		return ft_strdup("");
+	if (s1[0] == 0)
+		return (ft_strdup(""));
 	while (included(s1[first], set) == 1 && first <= last)
 		first++;
 	while (included(s1[last], set) == 1 && first <= last)

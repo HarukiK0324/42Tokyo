@@ -6,16 +6,16 @@
 /*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:11:47 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/30 17:06:02 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/11/30 18:43:43 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-void	ft_print_number(char c,int fd)
+
+void	ft_print_number(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -31,7 +31,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n >= 10)
 	{
-		ft_putnbr_fd(n / 10,fd);
+		ft_putnbr_fd(n / 10, fd);
 	}
-	ft_print_number(n % 10 + '0',fd);
+	ft_print_number(n % 10 + '0', fd);
 }

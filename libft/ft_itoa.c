@@ -6,7 +6,7 @@
 /*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:23:43 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/30 18:38:21 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/11/30 18:43:53 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ char	*odd_itoa(int n)
 
 	i = count_digit(n);
 	str = malloc(count_digit(n) + 2);
-	if(str == (void *)0)
-		return (void *)0;
+	if (str == (void *)0)
+		return ((void *)0);
 	str[i + 1] = '\0';
 	while (i > 0)
 	{
