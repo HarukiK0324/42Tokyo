@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:16:03 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/09 18:19:50 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/12/09 17:06:10 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-static unsigned int	size_of(char *s)
+static size_t	size_of(char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

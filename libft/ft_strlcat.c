@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 13:21:01 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/30 18:37:38 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/12/09 17:02:01 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static unsigned int	size_of(char *c)
+#include "libft.h"
+
+static size_t	size_of(char *c)
 {
-	unsigned int	n;
+	size_t	n;
 
 	n = 0;
 	while (*c != '\0')
@@ -23,11 +25,11 @@ static unsigned int	size_of(char *c)
 	return (n);
 }
 
-unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	size_dest;
-	unsigned int	size_src;
-	unsigned int	i;
+	size_t	size_dest;
+	size_t	size_src;
+	size_t	i;
 
 	size_dest = size_of(dest);
 	size_src = size_of((char *)src);

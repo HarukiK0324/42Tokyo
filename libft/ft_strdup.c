@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:39:59 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/09 20:10:14 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/12/09 17:04:45 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-static unsigned int	size_of(char const *s)
+static size_t	size_of(char const *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -27,7 +27,7 @@ static unsigned int	size_of(char const *s)
 char	*ft_strdup(const char *s)
 {
 	char	*ptr;
-	int		i;
+	size_t	i;
 
 	ptr = malloc(size_of(s) + 1);
 	i = 0;

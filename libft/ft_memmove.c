@@ -3,18 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 13:11:16 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/30 17:42:55 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/12/09 17:08:51 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, unsigned int n)
+#include "libft.h"
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
-	char			*d;
-	char			*s;
+	size_t	i;
+	char	*d;
+	char	*s;
 
 	i = 0;
 	d = (char *)dest;

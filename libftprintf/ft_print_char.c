@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/07 13:48:07 by haruki            #+#    #+#             */
-/*   Updated: 2024/12/09 16:51:35 by haruki           ###   ########.fr       */
+/*   Created: 2024/11/09 16:16:47 by hkasamat          #+#    #+#             */
+/*   Updated: 2024/12/09 16:53:19 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libftprintf.h"
 
-#include <stdarg.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include "libft.h"
+int	ft_print_string(char c)
+{
+	int i;
 
-int ft_printf(const char *, ...);
-int	ft_print_char(char c);
-
-
-#endif
+	i = write(1, &c, 1);
+	return i;
+}

@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 17:59:14 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/30 16:34:43 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/12/09 16:57:25 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+#include <unistd.h>
+#include <stdlib.h>
+#include <stddef.h>
 
 int				ft_atoi(const char *nptr);
 void			ft_bzero(void *s, unsigned int n);

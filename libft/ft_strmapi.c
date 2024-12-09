@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:21:11 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/09 19:53:49 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/12/09 16:58:04 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libtf.h"
 
 static unsigned int	size_of(const char *s)
 {

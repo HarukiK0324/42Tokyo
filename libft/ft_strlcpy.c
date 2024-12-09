@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 13:16:01 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/09 19:52:09 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/12/09 16:59:56 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static unsigned int	size_of(const char *src)
+#include "libft.h"
+
+static size_t	size_of(const char *src)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (*src != '\0')
@@ -23,9 +25,9 @@ static unsigned int	size_of(const char *src)
 	return (i);
 }
 
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 	const char		*ptr;
 
 	i = 0;

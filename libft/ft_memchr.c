@@ -3,18 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:00:14 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/30 16:29:44 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/12/09 17:11:47 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const void *s, int c, unsigned int n)
-{
-	unsigned char	*temp;
+#include "libft.h"
 
-	temp = (unsigned char *)s;
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	size_t	*temp;
+
+	temp = (size_t *)s;
 	while (n > 0)
 	{
 		if (*temp == (unsigned char)c)

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:05:08 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/11/30 17:08:06 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/12/09 17:03:14 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-static unsigned int	size_of(char const *s)
+static size_t	size_of(char const *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -27,7 +27,7 @@ static unsigned int	size_of(char const *s)
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ptr;
-	int		i;
+	size_t		i;
 
 	i = 0;
 	ptr = malloc(size_of(s1) + size_of(s2) + 1);
