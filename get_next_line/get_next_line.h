@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/07 13:48:07 by haruki            #+#    #+#             */
-/*   Updated: 2024/12/11 00:43:09 by haruki           ###   ########.fr       */
+/*   Created: 2024/12/10 12:53:13 by haruki            #+#    #+#             */
+/*   Updated: 2024/12/13 13:53:37 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef GET_NEXT_LINE_H
+#define GET_NEXT_LINE_H
 
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
 
-int ft_printf(const char *, ...);
-int	ft_print_char(char c);
-int	ft_print_string(char c);
-int	ft_strlen(const char *s);
-int	ft_print_num(char *c);
-int ft_print_unsigned_num(unsigned int num);
-int ft_print_hex_lower(int num);
-int ft_print_hex_upper(int num);
-int hex_size(int num);
+char *get_next_line(int fd);
+size_t ft_strlen(char *s);
+char *ft_strjoin(char *s1,char *s2);
+
+#ifndef BUFFER_SIZE
+#define BUFFER_SIZE 42
+#endif
 
 #endif

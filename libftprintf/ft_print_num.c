@@ -1,30 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_print_num.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/07 13:48:07 by haruki            #+#    #+#             */
-/*   Updated: 2024/12/11 00:43:09 by haruki           ###   ########.fr       */
+/*   Created: 2024/11/09 16:16:47 by hkasamat          #+#    #+#             */
+/*   Updated: 2024/12/09 18:35:50 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libftprintf.h"
 
-#include <stdarg.h>
-#include <unistd.h>
-#include <stdlib.h>
+int ft_digits(int num)
+{
+	int i;
 
-int ft_printf(const char *, ...);
-int	ft_print_char(char c);
-int	ft_print_string(char c);
-int	ft_strlen(const char *s);
-int	ft_print_num(char *c);
-int ft_print_unsigned_num(unsigned int num);
-int ft_print_hex_lower(int num);
-int ft_print_hex_upper(int num);
-int hex_size(int num);
+	i = 0;
+	if(num < 0)
+	{
+		num *= -1;
+		i++;
+	}
+	while(num)
+	{
+		num /= 10;
+		i++;
+	}
+	return i;
+}
 
-#endif
+int	ft_print_num(int num)
+{
+	if(num < 0)
+		ft_print_char('-');
+		num *= -1;
+	while (num)
+	{
+		ft_print_char(num % 10 + '0');
+		num /= 10;
+	}
+	return ft_digits(num);
+}

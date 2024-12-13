@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_print_string copy.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/07 13:48:07 by haruki            #+#    #+#             */
-/*   Updated: 2024/12/11 00:43:09 by haruki           ###   ########.fr       */
+/*   Created: 2024/11/09 16:16:47 by hkasamat          #+#    #+#             */
+/*   Updated: 2024/12/09 18:27:51 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libftprintf.h"
 
-#include <stdarg.h>
-#include <unistd.h>
-#include <stdlib.h>
-
-int ft_printf(const char *, ...);
-int	ft_print_char(char c);
-int	ft_print_string(char c);
-int	ft_strlen(const char *s);
-int	ft_print_num(char *c);
-int ft_print_unsigned_num(unsigned int num);
-int ft_print_hex_lower(int num);
-int ft_print_hex_upper(int num);
-int hex_size(int num);
-
-#endif
+int ft_print_unsigned_num(unsigned int num)
+{
+	if(num >= 10){
+		ft_print_unsigned_num(num / 10);
+		ft_print_char(num % 10 + '0');
+	}
+	else
+		ft_print_char(num + '0');
+}
