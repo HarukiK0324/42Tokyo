@@ -6,13 +6,13 @@
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:16:47 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/12/09 16:53:19 by haruki           ###   ########.fr       */
+/*   Updated: 2024/12/13 17:18:39 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_print_string(char c)
+int	ft_print_char(char c)
 {
 	int i;
 

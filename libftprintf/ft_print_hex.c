@@ -6,22 +6,17 @@
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:16:47 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/12/11 00:43:01 by haruki           ###   ########.fr       */
+/*   Updated: 2024/12/13 17:24:36 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int hex_size(int num)
+int hex_size(unsigned int num)
 {
 	int i;
 
 	i = 0;
-	if(num < 0)
-	{
-		num *= -1;
-		i++;
-	}
 	while(num)
 	{
 		num /= 16;
@@ -30,7 +25,7 @@ int hex_size(int num)
 	return i;
 }
 
-int ft_print_hex_lower(int num)
+int ft_print_hex_lower(unsigned int num)
 {
 	if(num >= 16){
 		ft_print_unsigned_num(num / 16);
@@ -44,7 +39,7 @@ int ft_print_hex_lower(int num)
 	return hex_size(num);
 }
 
-int ft_print_hex_upper(int num)
+int ft_print_hex_upper(unsigned int num)
 {
 	if(num >= 16){
 		ft_print_unsigned_num(num / 16);
