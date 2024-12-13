@@ -6,11 +6,11 @@
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:54:09 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/12/09 18:18:38 by haruki           ###   ########.fr       */
+/*   Updated: 2024/12/13 19:57:10 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_strlen(const char *s)
 {

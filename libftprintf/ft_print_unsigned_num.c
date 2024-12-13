@@ -6,11 +6,11 @@
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:16:47 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/12/13 17:24:17 by haruki           ###   ########.fr       */
+/*   Updated: 2024/12/13 19:56:57 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 int ft_unsigned_digits(unsigned int num)
 {
 	int i;
