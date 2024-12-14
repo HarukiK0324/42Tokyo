@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_pointer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 17:30:19 by haruki            #+#    #+#             */
-/*   Updated: 2024/12/14 17:57:23 by haruki           ###   ########.fr       */
+/*   Updated: 2024/12/14 18:19:49 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_print_pointer(void *ptr)
 	if (ptr == NULL)
 	{
 		ft_print_string("(nil)");
-		return (-1);
+		return (5);
 	}
 	ft_print_string("0x");
 	ft_print_hex_pointer(address);

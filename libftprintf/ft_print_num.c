@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_num.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:16:47 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/12/14 17:56:15 by haruki           ###   ########.fr       */
+/*   Updated: 2024/12/14 18:11:38 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ int	ft_digits(int num)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	if (num < 0)
 	{
 		num *= -1;
 		i++;
 	}
-	while (num)
+	while (num >= 10)
 	{
 		num /= 10;
 		i++;

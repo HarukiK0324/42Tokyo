@@ -6,7 +6,7 @@
 /*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 13:48:07 by haruki            #+#    #+#             */
-/*   Updated: 2024/12/14 18:09:08 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/12/14 18:31:16 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-int		ft_printf(const char *, ...);
+int		ft_printf(const char *format, ...);
 int		ft_print_char(int c);
 int		ft_print_string(char *c);
 int		ft_strlen(const char *s);
