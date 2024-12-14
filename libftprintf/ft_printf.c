@@ -6,7 +6,7 @@
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 13:46:57 by haruki            #+#    #+#             */
-/*   Updated: 2024/12/14 17:42:56 by haruki           ###   ########.fr       */
+/*   Updated: 2024/12/14 17:57:01 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	ft_printf(const char *format, ...)
 			{
 				result = handle_specifier(*format, args);
 				if (result == -1)
-					return -1;
+					return (-1);
 				i += result;
 			}
 		}
@@ -59,6 +59,6 @@ int	ft_printf(const char *format, ...)
 			i += ft_print_char(*format);
 		format++;
 	}
-    va_end(args);
+	va_end(args);
 	return (i);
 }

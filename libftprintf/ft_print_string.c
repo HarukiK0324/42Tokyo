@@ -6,7 +6,7 @@
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:16:47 by hkasamat          #+#    #+#             */
-/*   Updated: 2024/12/13 20:14:18 by haruki           ###   ########.fr       */
+/*   Updated: 2024/12/14 17:57:14 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 int	ft_print_string(char *c)
 {
-	if(c == NULL)
+	if (c == NULL)
 	{
 		c = "(null)";
-		return -1;
+		return (-1);
 	}
-	return (int)write(1, c, ft_strlen(c));;
+	return (int)write(1, c, ft_strlen(c));
+	;
 }
