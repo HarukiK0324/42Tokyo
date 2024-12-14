@@ -24,6 +24,7 @@ int	ft_unsigned_digits(unsigned int num)
 	}
 	return (i);
 }
+
 int	ft_print_unsigned_num(unsigned int num)
 {
 	if (num >= 10)

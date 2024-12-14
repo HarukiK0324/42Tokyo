@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 13:46:57 by haruki            #+#    #+#             */
-/*   Updated: 2024/12/14 17:57:01 by haruki           ###   ########.fr       */
+/*   Updated: 2024/12/14 18:08:07 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,26 @@
 
 int	handle_specifier(char format, va_list args)
 {
-	if (format == 'c') // char
+	if (format == 'c')
 		return (ft_print_char(va_arg(args, int)));
-	else if (format == 's') // string
+	else if (format == 's')
 		return (ft_print_string(va_arg(args, char *)));
-	else if (format == 'p') // pointer
+	else if (format == 'p')
 		return (ft_print_pointer(va_arg(args, void *)));
-	else if (format == 'd' || format == 'i') // decimal base 10 & integer
+	else if (format == 'd' || format == 'i')
 		return (ft_print_num(va_arg(args, int)));
-	else if (format == 'u') // unsigned decimal base 10
+	else if (format == 'u')
 		return (ft_print_unsigned_num(va_arg(args, unsigned int)));
-	else if (format == 'x') // hexadecimal lowercase
+	else if (format == 'x')
 		return (ft_print_hex_lower(va_arg(args, unsigned int)));
-	else if (format == 'X') // hexadecimal uppercase
+	else if (format == 'X')
 		return (ft_print_hex_upper(va_arg(args, unsigned int)));
-	else if (format == '%') // precent sign
+	else if (format == '%')
 		return (ft_print_char('%'));
 	else
 		return (-1);
 }
+
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
