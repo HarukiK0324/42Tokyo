@@ -6,7 +6,7 @@
 /*   By: haruki <haruki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 13:46:57 by haruki            #+#    #+#             */
-/*   Updated: 2024/12/13 21:23:42 by haruki           ###   ########.fr       */
+/*   Updated: 2024/12/14 17:42:56 by haruki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,4 @@ int	ft_printf(const char *format, ...)
 	}
     va_end(args);
 	return (i);
-}
-
-int main(void) {
-    ft_printf("%d", 1);
-    return 0;
 }
