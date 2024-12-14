@@ -6,7 +6,7 @@
 /*   By: hkasamat <hkasamat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 13:46:57 by haruki            #+#    #+#             */
-/*   Updated: 2024/12/14 18:08:07 by hkasamat         ###   ########.fr       */
+/*   Updated: 2024/12/14 18:36:54 by hkasamat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int	ft_printf(const char *format, ...)
 
 	va_start(args, (char *)format);
 	i = 0;
-	result = 0;
 	while (*format != '\0')
 	{
 		if (*format == '%')
