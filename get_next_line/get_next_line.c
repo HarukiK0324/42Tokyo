@@ -17,7 +17,7 @@ char *get_line_from_buffer(char *line,int fd)
     char *buffer;
     int result;
 
-    buffer = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
+    buffer = (char *)malloc(BUFFER_SIZE);
     if(buffer == NULL)
         return NULL;
     result = read(fd, buffer, BUFFER_SIZE);
@@ -98,7 +98,6 @@ char *get_next_line(int fd)
 {
     static char *line;
 
-    line = NULL;
     if(fd < 0 || BUFFER_SIZE <= 0)
         return NULL;
     while(find_newline(line) == -1)
